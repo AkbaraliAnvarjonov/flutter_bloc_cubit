@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_cubit/bloc/area_calc/area_calc_state.dart';
 
 class AreaCalcCubit extends Cubit<AreaCalcState> {
-  AreaCalcCubit() : super(InitialState(a: 0));
+  AreaCalcCubit() : super(InitialState());
 
   circleArea(num a) {
     emit(CircleAreaState(3.14 * a * a));

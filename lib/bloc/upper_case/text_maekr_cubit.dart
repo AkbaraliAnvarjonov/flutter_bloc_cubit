@@ -4,6 +4,7 @@ class TextMakerCubit extends Cubit<String> {
   TextMakerCubit() : super("");
 
   toUpperCase(String word) {
+    
     emit(word.toUpperCase());
   }
 }

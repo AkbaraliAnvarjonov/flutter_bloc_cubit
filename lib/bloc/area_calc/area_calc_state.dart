@@ -1,9 +1,7 @@
 abstract class AreaCalcState {}
 
 class InitialState extends AreaCalcState {
-  InitialState({required this.a});
-
-  final int a;
+  InitialState();
 }
 
 class TriangleAreaState extends AreaCalcState {

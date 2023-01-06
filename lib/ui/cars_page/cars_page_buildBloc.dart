@@ -12,7 +12,7 @@ class CarsPageBlocBuild extends StatelessWidget {
   Widget build(BuildContext context) {
     CarsCubit carsCubit = CarsCubit(CarsRepos(apiService: UserApiSerice()));
     return BlocProvider(
-      create:(context) => carsCubit,
+      create: (context) => carsCubit,
       child: Scaffold(
         appBar: AppBar(title: const Text("Cars Page BlocBuild")),
         body: BlocBuilder<CarsCubit, CarsState>(

@@ -36,6 +36,8 @@ class CarsPage extends StatelessWidget {
         listener: (context, state) {
           if (state is LoadCarsInProgress) {
             MyUtils.getMyToast(message: "Loading in progress...");
+          } else if (state is LoadCarsInSuccess) {
+            MyUtils.getMyToast(message: "Success data");
           }
         },
       ),

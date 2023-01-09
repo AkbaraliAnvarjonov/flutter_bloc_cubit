@@ -7,4 +7,6 @@ class CarsRepos {
   final UserApiSerice apiService;
 
   Future<MyResponse> getAllCars() => apiService.getCarsList();
+  Future<MyResponse> getSingleCar({required int id}) =>
+      apiService.getCarInfo(id: id);
 }

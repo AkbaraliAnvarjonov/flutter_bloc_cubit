@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_bloc_cubit/bloc/cars/cars_cubit.dart';
+import 'package:flutter_bloc_cubit/bloc/cars/cars_bloc.dart';
 import 'package:flutter_bloc_cubit/bloc/cars/cars_state.dart';
+import 'package:flutter_bloc_cubit/ui/car_info_page/car_info.dart';
 import 'package:flutter_bloc_cubit/utils/my_utils.dart';
 
 class CarsPage extends StatelessWidget {
@@ -11,7 +12,7 @@ class CarsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Cars Page Consumer")),
-      body: BlocConsumer<CarsCubit, CarsState>(
+      body: BlocConsumer<CarsBloc, CarsState>(
         builder: (context, state) {
           if (state is InitialCarsState) {
             return const Text("Hali data yo'q");
@@ -24,6 +25,14 @@ class CarsPage extends StatelessWidget {
               children: List.generate(
                   state.albums.length,
                   (index) => ListTile(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    CarInfo(id: state.albums[index].id),
+                              ));
+                        },
                         title: Text(state.albums[index].carModel),
                       )),
             );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc_cubit/ui/calc_area_page/calc_area_page.dart';
 import 'package:flutter_bloc_cubit/ui/cars_consumer_page/cars_page.dart';
-import 'package:flutter_bloc_cubit/ui/cars_page/cars_page_buildBloc.dart';
 import 'package:flutter_bloc_cubit/ui/text_maker_page/text_maker_page.dart';
 
 class HomePage extends StatelessWidget {
